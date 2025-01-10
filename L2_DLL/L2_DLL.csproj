@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73678C72-257F-41E1-9E70-5B6777C81E55}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>L2_DLL</RootNamespace>
+    <AssemblyName>L2_DLL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="L3_DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\L3_DAL\bin\Debug\L3_DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="L4_DTO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\L4_DTO\bin\Debug\L4_DTO.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="L2_0_Xuly_Layer\L2_0_1_QLSV\Manager_ChuyenNganh_1.cs" />
+    <Compile Include="L2_0_Xuly_Layer\L2_0_1_QLSV\Manager_Khoa_1.cs" />
+    <Compile Include="L2_0_Xuly_Layer\L2_0_1_QLSV\Manager_SinhVien_1.cs" />
+    <Compile Include="Manager_CTSD_DICHVU_HANGHOA_1.cs" />
+    <Compile Include="Manager_CT_NHAPHANG_HANGHOA_1.cs" />
+    <Compile Include="Manager_Tab_BaoCao_1.cs" />
+    <Compile Include="Manager_TongQuan_1.cs" />
+    <Compile Include="Manager_tab_ThemNH_1.cs" />
+    <Compile Include="Manager_TaiKhoan_1.cs" />
+    <Compile Include="Manager_tab_HangHoa_1.cs" />
+    <Compile Include="Manager_tab_DV_1.cs" />
+    <Compile Include="Manager_Login_1.cs" />
+    <Compile Include="Manager_tab_NH_1.cs" />
+    <Compile Include="Manager_tab_NCC_1.cs" />
+    <Compile Include="Manager_tab_KH_1.cs" />
+    <Compile Include="Manager_Tab_THANHTOAN_1.cs" />
+    <Compile Include="Manager_CTHD_HOADON_DICHVU_1.cs" />
+    <Compile Include="Manager_HoaDon_1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
